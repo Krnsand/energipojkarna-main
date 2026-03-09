@@ -76,7 +76,7 @@ const ProductList = ({ slice, context }) => {
                       {product.data.primary_image?.url && (
                         <Image
                           draggable={false}
-                          priority
+                          // priority
                           src={prismic.asImageSrc(product.data.primary_image, {
                             width: 750,
                             q: 70,

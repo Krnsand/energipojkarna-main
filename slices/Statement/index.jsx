@@ -29,7 +29,7 @@ const Statement = ({ slice }) => {
             src={backgroundImage.url}
             width={backgroundImage.dimensions.width}
             height={backgroundImage.dimensions.height}
-            priority={true}
+            // priority={true}
           />
         </div>
       )}

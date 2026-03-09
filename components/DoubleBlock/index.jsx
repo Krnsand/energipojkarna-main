@@ -174,18 +174,24 @@ const DoubleBlock = ({ slice, bookDemo, index }) => {
             isForm ? styles.rightWrapperForm : styles.rightWrapper
           } ${stretch_image ? styles.rightWrapperFull : ''}`}>
           <>
-            {image?.url && (
-              <Image
-                draggable={false}
-                className={`${styles.image} ${
-                  stretch_image ? styles.stretchImage : ''
-                }`}
-                quality={70}
-                src={image.url}
-                width={image.dimensions.width}
-                height={image.dimensions.height}
-                alt={image.alt}
-              />
+            {image?.url && image?.dimensions?.width && image?.dimensions?.height && (
+              <div
+                className={styles.imageSizer}
+                style={{
+                  aspectRatio: `${image.dimensions.width} / ${image.dimensions.height}`,
+                }}>
+                <Image
+                  draggable={false}
+                  className={`${styles.image} ${
+                    stretch_image ? styles.stretchImage : ''
+                  }`}
+                  quality={70}
+                  src={image.url}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             )}
             {isForm && (
               <Form

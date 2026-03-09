@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import { DefaultSeo } from 'next-seo'
 import NextNProgress from 'nextjs-progressbar'
 import { GoogleTagManager } from '@next/third-parties/google'
+import { Nunito_Sans, Open_Sans } from 'next/font/google'
 
 import { PrismicProvider } from '@prismicio/react'
 import { store } from '@/lib/redux/store'
@@ -13,6 +14,20 @@ import WindowWatcher from '@/components/WindowWatcher'
 import Layout from '@/components/Layout'
 import { isDevelopment, isProduction } from '@/lib/utils/helpers'
 import { useUTMCookies } from '@/lib/hooks/useUTMCookies'
+
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-nunito-sans',
+  display: 'optional',
+})
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  variable: '--font-open-sans',
+  display: 'optional',
+})
 
 function App({ Component, pageProps }) {
   // Automatically capture and save UTM parameters on all pages
@@ -84,7 +99,7 @@ function App({ Component, pageProps }) {
         internalLinkComponent={({ href, ...props }) => (
           <Link draggable={false} href={href} {...props} />
         )}>
-        <div className="document">
+        <div className={`document ${nunitoSans.variable} ${openSans.variable}`}>
           <Layout page={pageProps.page}>
             <Component {...pageProps} />
           </Layout>

@@ -33,10 +33,11 @@ const Hero = ({ slice }) => {
             <Image
               draggable={false}
               src={image.url}
-              alt=""
+              alt="Välkomstbild på energipojkarna"
               width={image.dimensions.width}
               height={image.dimensions.height}
-              priority={true}
+              priority
+              sizes="100vw"
             />
           </div>
         )}
