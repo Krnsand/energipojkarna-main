@@ -201,7 +201,16 @@ const ProductPage = ({ page }) => {
                     {primaryImage && (
                       <motion.figure
                         className={styles.productImage}
-                        onClick={() => openGallery(primaryImage.id)}>
+                        onClick={() => openGallery(primaryImage.id)}
+                        onKeyDown={e => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault()
+                            openGallery(primaryImage.id)
+                          }
+                        }}
+                        role="button"
+                        tabIndex={0}
+                        aria-label="Öppna bildgalleri">
                         <Image
                           draggable={false}
                           priority
@@ -209,6 +218,7 @@ const ProductPage = ({ page }) => {
                           alt={page.data.name}
                           width={primaryImage.originalWidth}
                           height={primaryImage.originalHeight}
+                          sizes="(max-width: 768px) 100vw, 50vw"
                         />
                       </motion.figure>
                     )}
@@ -223,6 +233,15 @@ const ProductPage = ({ page }) => {
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                               onClick={() => openGallery(image.id)}
+                              onKeyDown={e => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                  e.preventDefault()
+                                  openGallery(image.id)
+                                }
+                              }}
+                              role="button"
+                              tabIndex={0}
+                              aria-label="Öppna bildgalleri"
                               className={styles.productImageThumbnail}
                               key={image.id}
                               src={image.thumbnail}

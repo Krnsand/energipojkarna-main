@@ -84,6 +84,7 @@ const ProductList = ({ slice, context }) => {
                           alt={product.data.name}
                           width={product.data.primary_image.dimensions.width}
                           height={product.data.primary_image.dimensions.height}
+                          sizes="(max-width: 768px) 40vw, (max-width: 1024px) 25vw, 20vw"
                         />
                       )}
                     </figure>

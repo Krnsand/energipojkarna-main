@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { Provider } from 'react-redux'
 import { DefaultSeo } from 'next-seo'
 import NextNProgress from 'nextjs-progressbar'
-import { GoogleTagManager } from '@next/third-parties/google'
 import { Nunito_Sans, Open_Sans } from 'next/font/google'
+import Script from 'next/script'
 
 import { PrismicProvider } from '@prismicio/react'
 import { store } from '@/lib/redux/store'
@@ -77,7 +77,23 @@ function App({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
       </Head>
-      {!isDevelopment && <GoogleTagManager gtmId="GTM-5TH5GBX5" />}
+      {!isDevelopment && (
+        <>
+          <Script
+            id="gtm-init"
+            strategy="lazyOnload"
+            dangerouslySetInnerHTML={{
+              __html:
+                "window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});",
+            }}
+          />
+          <Script
+            id="gtm-script"
+            strategy="lazyOnload"
+            src="https://www.googletagmanager.com/gtm.js?id=GTM-5TH5GBX5"
+          />
+        </>
+      )}
       <DefaultSeo
         openGraph={{
           type: 'website',

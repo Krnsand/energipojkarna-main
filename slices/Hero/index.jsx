@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from './Hero.module.scss'
 import Button from '@/components/Button'
@@ -10,18 +9,8 @@ const Hero = ({ slice }) => {
     primary: { titleRow1, titleRow2, text, imageDesktop, imageMobile },
     items,
   } = slice
-  const { isMobile, isLoaded } = useWindowSize()
-  const [image, setImage] = useState(null)
-
-  useEffect(() => {
-    if (isLoaded) {
-      if (isMobile) {
-        setImage(imageMobile)
-      } else {
-        setImage(imageDesktop)
-      }
-    }
-  }, [imageDesktop, imageMobile, isLoaded, isMobile])
+  const { isMobile } = useWindowSize()
+  const image = isMobile ? imageMobile : imageDesktop
 
   return (
     <section className={styles.outerContainer}>
@@ -33,11 +22,12 @@ const Hero = ({ slice }) => {
             <Image
               draggable={false}
               src={image.url}
-              alt="Välkomstbild på energipojkarna"
+              alt={image.alt || 'Välkomstbild på energipojkarna'}
               width={image.dimensions.width}
               height={image.dimensions.height}
               priority
-              sizes="100vw"
+              fetchPriority="high"
+              sizes="(max-width: 768px) 100vw, 40vw"
             />
           </div>
         )}

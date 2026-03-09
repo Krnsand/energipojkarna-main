@@ -187,7 +187,7 @@ const DoubleBlock = ({ slice, bookDemo, index }) => {
                   }`}
                   quality={70}
                   src={image.url}
-                  alt={image.alt}
+                  alt={image.alt || ''}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
@@ -216,7 +216,18 @@ const DoubleBlock = ({ slice, bookDemo, index }) => {
                   <div dangerouslySetInnerHTML={{ __html: video.html }} />
                 </div>
               ) : (
-                <a onClick={handleClick} className={styles.previewWrapper}>
+                <a
+                  onClick={handleClick}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      handleClick()
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Spela upp video"
+                  className={styles.previewWrapper}>
                   <Image
                     draggable={false}
                     className={styles.youtubeImage}
