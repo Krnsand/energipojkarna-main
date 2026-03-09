@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
+import dynamic from 'next/dynamic'
 import styles from './Form.module.scss'
 import Button from '@/components/Button'
-import ContactForm from '@/components/Form/ContactForm'
 import FormHeader from '@/components/Form/FormHeader'
+
+const ContactForm = dynamic(() => import('@/components/Form/ContactForm'))
 
 const FormWrapper = ({
   formTitle,
