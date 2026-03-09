@@ -1,0 +1,366 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default-slice",
+		"primary": {
+			"progressBar": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"backgroundColor": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "White"
+			},
+			"titleRow1": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Energipojkarna"
+			},
+			"bodyText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Det finns många tillverkare och modeller att välja bland, så vilken är rätt för dig? Vår rekommendation är att du låter oss hjälpa dig välja. Hur stort hus du har och och vilken maximal bredd inomhusdelen kan ha för att få plats är egentligen allt vi behöver veta för att kunna föreslå en riktigt bra luftvärmepump. Finns det något märke du gärna vill ha, till exempel Panasonic eller Toshiba, så kan du självklart få det.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"titleRow2": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Önskar dig en skön sommar"
+			},
+			"image": {
+				"url": "https://images.unsplash.com/photo-1526577493214-1f1666aa7fa9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxTdW1tZXIlMjBzd2VkZW58ZW58MHx8fHwxNzA5OTI2OTMwfDA&ixlib=rb-4.0.3&q=85",
+				"alt": "photo of trees on forest",
+				"origin": {
+					"id": "uJEX3Ju1NAc",
+					"url": "https://images.unsplash.com/photo-1526577493214-1f1666aa7fa9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxTdW1tZXIlMjBzd2VkZW58ZW58MHx8fHwxNzA5OTI2OTMwfDA&ixlib=rb-4.0.3&q=85",
+					"width": 5176,
+					"height": 4000
+				},
+				"width": 5176,
+				"height": 4000,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"stretch_image": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://energipojkarna.se"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Läs mer här"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "doubleBlockLargeWithVideo",
+		"primary": {
+			"progressBar": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"backgroundColor": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "White"
+			},
+			"titleRow1": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Title row"
+			},
+			"titleRow2": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Subtitle row"
+			},
+			"bodyText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Magna in anim nisi in qui cupidatat ad sit ex anim. Sit tempor nulla reprehenderit occaecat ut."
+						}
+					}
+				]
+			},
+			"video": {
+				"embed_url": "https://www.youtube.com/watch?v=O826_xD8_t0",
+				"type": "video",
+				"version": "1.0",
+				"title": "Energipojkarna AB - Allt inom värmepumpar",
+				"author_name": "Energipojkarna",
+				"author_url": "https://www.youtube.com/@Energipojkarna",
+				"provider_name": "YouTube",
+				"provider_url": "https://www.youtube.com/",
+				"thumbnail_url": "https://i.ytimg.com/vi/O826_xD8_t0/hqdefault.jpg",
+				"thumbnail_width": 480,
+				"thumbnail_height": 360,
+				"html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/O826_xD8_t0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Energipojkarna AB - Allt inom värmepumpar\"></iframe>",
+				"__TYPE__": "EmbedContent",
+				"all": {
+					"embed_url": "https://www.youtube.com/watch?v=O826_xD8_t0",
+					"type": "video",
+					"version": "1.0",
+					"title": "Energipojkarna AB - Allt inom värmepumpar",
+					"author_name": "Energipojkarna",
+					"author_url": "https://www.youtube.com/@Energipojkarna",
+					"provider_name": "YouTube",
+					"provider_url": "https://www.youtube.com/",
+					"thumbnail_url": "https://i.ytimg.com/vi/O826_xD8_t0/hqdefault.jpg",
+					"thumbnail_width": 480,
+					"thumbnail_height": 360,
+					"html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/O826_xD8_t0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Energipojkarna AB - Allt inom värmepumpar\"></iframe>",
+					"height": 113,
+					"width": 200
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://energipojkarna.se"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Button label"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "doubleBlockLargeWithForm",
+		"primary": {
+			"progressBar": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"backgroundColor": {
+				"__TYPE__": "FieldContent",
+				"value": "White",
+				"type": "Select"
+			},
+			"titleRow1": {
+				"__TYPE__": "FieldContent",
+				"value": "make",
+				"type": "Text"
+			},
+			"titleRow2": {
+				"__TYPE__": "FieldContent",
+				"value": "principal",
+				"type": "Text"
+			},
+			"bodyText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Esse anim id ad esse nisi aliquip veniam consectetur."
+						}
+					}
+				]
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+					"width": 5000,
+					"height": 4613
+				},
+				"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+				"width": 5000,
+				"height": 4613,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"formCheckboxText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur ut do dolore minim."
+						}
+					}
+				]
+			},
+			"formTitle": {
+				"__TYPE__": "FieldContent",
+				"value": "remove",
+				"type": "Text"
+			},
+			"formSubtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "continued",
+				"type": "Text"
+			},
+			"formButtonText": {
+				"__TYPE__": "FieldContent",
+				"value": "audience",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "start",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "doubleBlockLargeWithTexts",
+		"primary": {
+			"progressBar": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"backgroundColor": {
+				"__TYPE__": "FieldContent",
+				"value": "White",
+				"type": "Select"
+			},
+			"titleRow1": {
+				"__TYPE__": "FieldContent",
+				"value": "south",
+				"type": "Text"
+			},
+			"titleRow2": {
+				"__TYPE__": "FieldContent",
+				"value": "vote",
+				"type": "Text"
+			},
+			"bodyTextLeft": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Est non ut excepteur dolor eu Lorem do reprehenderit dolor aliquip duis. Ea non mollit est pariatur magna pariatur. Esse proident do Lorem anim ut ipsum mollit cupidatat ex aliquip ea reprehenderit aliqua."
+						}
+					}
+				]
+			},
+			"bodyTextRight": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Deserunt qui velit eiusmod aliquip ullamco aliqua. Culpa esse esse occaecat eu labore."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://prismic.io"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "breathe",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

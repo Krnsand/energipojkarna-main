@@ -1,0 +1,162 @@
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.container {
+  background-color: var(--white);
+  overflow: hidden;
+  position: relative;
+  @include mixins.onTabletUp {
+    @include mixins.container;
+    @include mixins.grid(4, 12, 12, false);
+  }
+}
+.bgImageWrapper {
+  position: absolute;
+  top: -50vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  &.bgImageDim60 {
+    &:after {
+      background-color: rgba(var(--black-rgb), 0.6);
+    }
+  }
+  &.bgImageDim80 {
+    &:after {
+      background-color: rgba(var(--black-rgb), 0.8);
+    }
+  }
+  &:after {
+    content: '';
+    background-color: rgba(var(--black-rgb), 0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.graphicSvg {
+  display: none;
+  @include mixins.onTabletUp {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //
+    // width: auto;
+    @include mixins.fluid(width, 300px, 300px, 300px);
+    @include mixins.fluid(height, 1000px, 1000px, 1000px);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.rightSvg {
+  @extend .graphicSvg;
+  @include mixins.onTabletUp {
+    right: 0;
+    top: 0;
+  }
+  svg {
+    transform-origin: center center;
+    transform: rotate(180deg);
+  }
+}
+.leftSvg {
+  @extend .graphicSvg;
+  @include mixins.onTabletUp {
+    left: 0;
+    top: 0;
+  }
+}
+
+.wrapper {
+  position: relative;
+  z-index: 5;
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 6,
+    variables.$grid-gutter-tablet * 8,
+    variables.$grid-gutter * 8
+  );
+  @include mixins.fluid(
+    (padding-right, padding-left),
+    variables.$grid-gutter-mobile * 2,
+    0px,
+    0px
+  );
+  @include mixins.onTabletUp {
+    grid-column: 4 / span 6;
+  }
+  &.wrapperWithGraphics {
+    @include mixins.onTabletUp {
+      grid-column: 2 / span 7;
+    }
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    :first-child {
+      color: var(--green);
+    }
+  }
+  .textWrapper {
+    color: var(--grey);
+    @include mixins.fluid(
+      padding-top,
+      variables.$grid-gutter-mobile * 4,
+      variables.$grid-gutter-tablet,
+      variables.$grid-gutter
+    );
+    @include mixins.onTabletUp {
+      display: flex;
+      flex-direction: column;
+      @include mixins.fluid(
+        padding-top,
+        variables.$grid-gutter-mobile,
+        variables.$grid-gutter-tablet,
+        variables.$grid-gutter * 2
+      );
+    }
+  }
+  .buttonWrapper {
+    @include mixins.fluid(
+      margin-top,
+      variables.$grid-gutter-mobile * 4,
+      variables.$grid-gutter-tablet * 4,
+      variables.$grid-gutter * 2
+    );
+    @include mixins.fluid(gap, 10px, 10px, 20px, 20px);
+    display: flex;
+    flex-direction: column;
+    @include mixins.onTabletUp {
+      flex-direction: row;
+    }
+  }
+}
+
+.wrapperWithBackground {
+  @extend .wrapper;
+  .title {
+    color: var(--white);
+    &:first-child {
+      color: var(--white);
+    }
+  }
+  .textWrapper {
+    color: var(--white);
+  }
+}

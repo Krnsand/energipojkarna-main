@@ -1,0 +1,66 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default-slice",
+		"primary": {
+			"backgroundColor": {
+				"__TYPE__": "FieldContent",
+				"value": "White",
+				"type": "Select"
+			},
+			"caption": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Att välja rätt luftvärmepump"
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Att välja rätt luftvärmepump",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"wideTitle": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Det finns många tillverkare och modeller att välja bland, så vilken är rätt för dig? Vår rekommendation är att du låter oss hjälpa dig välja. Hur stort hus du har och och vilken maximal bredd inomhusdelen kan ha för att få plats är egentligen allt vi behöver veta för att kunna föreslå en riktigt bra luftvärmepump. Finns det något märke du gärna vill ha, till exempel Panasonic eller Toshiba, så kan du självklart få det.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"buttonLink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"buttonLabel": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Läs mer"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

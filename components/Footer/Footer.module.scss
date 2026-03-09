@@ -1,0 +1,82 @@
+@use '@/styles/mixins';
+
+.container {
+  position: relative;
+  background-color: var(--grey);
+  color: var(--white);
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    40px,
+    80px,
+    100px,
+    120px
+  );
+  a {
+    color: var(--white);
+  }
+  @include mixins.onMobile {
+    grid-row-gap: 40px;
+  }
+}
+.footerTitle {
+  @include mixins.fluid(margin-bottom, 20px, 20px, 20px, 20px);
+}
+
+.footerLinks {
+  grid-column: 1 / -1;
+  @include mixins.onTabletUp {
+    grid-column: 2 / span 4;
+  }
+}
+.link {
+  flex-grow: 0;
+}
+.activeLink {
+  color: var(--green) !important;
+  border-bottom: 1px solid var(--green);
+}
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footerPartners {
+  grid-column: 1 / -1;
+  @include mixins.onTabletUp {
+    grid-column: span 2;
+  }
+}
+.footerPartnerImages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  justify-content: center;
+  align-items: flex-start;
+  @include mixins.fluid(gap, 20px, 30px, 40px, 40px);
+  @include mixins.onMobile {
+    flex-direction: row;
+    align-items: center;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+.footerPhone {
+  grid-column: span 2;
+  @include mixins.onTabletUp {
+    grid-column: span 2;
+  }
+  a {
+    border-bottom: 1px solid var(--white);
+  }
+}
+.footerAddress {
+  grid-column: span 2;
+  @include mixins.onTabletUp {
+    grid-column: span 2;
+  }
+  a {
+    border-bottom: 1px solid var(--white);
+  }
+}

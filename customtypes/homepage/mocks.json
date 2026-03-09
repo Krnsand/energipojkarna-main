@@ -1,0 +1,18 @@
+[
+  {
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": []
+    },
+    "metaTitle": {
+      "__TYPE__": "FieldContent",
+      "value": "including",
+      "type": "Text"
+    },
+    "metaDescription": {
+      "__TYPE__": "FieldContent",
+      "value": "solar",
+      "type": "Text"
+    }
+  }
+]

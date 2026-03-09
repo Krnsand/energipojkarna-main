@@ -1,0 +1,87 @@
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.contactFormStatus {
+  display: flex;
+  flex-direction: column;
+  @include mixins.fluid(
+    (margin-top, margin-bottom),
+    variables.$grid-gutter-mobile * 5,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+  @include mixins.fluid(
+    (padding-left, padding-right),
+    variables.$grid-gutter-mobile,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+  @include mixins.fluid(
+    gap,
+    0px,
+    variables.$grid-gutter-tablet / 2,
+    variables.$grid-gutter / 2
+  );
+
+  background-color: var(--green);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  @include mixins.fluid(border-radius, 6px, 6px, 8px);
+}
+
+.contactFormStatusError {
+  background-color: var(--red);
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  @include mixins.fluid(
+    (margin-top, margin-bottom),
+    variables.$grid-gutter-mobile * 2.5,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+  @include mixins.fluid(
+    (padding-left, padding-right),
+    variables.$grid-gutter-mobile,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+  @include mixins.fluid(
+    gap,
+    0px,
+    variables.$grid-gutter-tablet / 2,
+    variables.$grid-gutter / 2
+  );
+
+  background-color: var(--green);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  @include mixins.fluid(border-radius, 6px, 6px, 8px);
+}
+.contactFormTitle {
+  color: var(--white);
+  @include mixins.onMobile {
+    margin-bottom: variables.$grid-gutter-mobile;
+  }
+}
+.contactFormGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactFormLabel {
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+}

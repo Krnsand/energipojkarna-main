@@ -1,0 +1,54 @@
+@use '@/styles/mixins';
+
+.container {
+  -webkit-tap-highlight-color: transparent;
+  // scroll-margin-top: -100px;
+}
+.header {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  border-top: 1px solid rgb(var(--grey-rgb), 0.2);
+  @include mixins.fluid((padding-top, padding-bottom), 20px);
+}
+.headerExpanded {
+  // background-color: var(--green);
+  // color: var(--white);
+  // transition: background-color 0.3s ease, color 0.3s ease;
+}
+.title {
+  // font-weight: 500;
+}
+.content {
+  position: relative;
+  @include mixins.fluid(padding-bottom, 20px);
+  transform-origin: top center;
+  overflow: hidden;
+}
+
+.activeIcon {
+  position: relative;
+  @include mixins.fluid((width, height), 12px, 12px, 15px);
+}
+.activeIconLine {
+  background-color: var(--grey);
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+.activeIconVertical {
+  @extend .activeIconLine;
+}
+.activeIconHorizontal {
+  @extend .activeIconLine;
+  transform: rotate(90deg);
+}
+.activeIconExpanded {
+  // background-color: var(--white);
+}

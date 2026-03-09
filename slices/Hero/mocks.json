@@ -1,0 +1,100 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default-slice",
+		"primary": {
+			"titleRow1": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Kom in i värmen"
+			},
+			"titleRow2": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Vi hjälper dig"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Anim incididunt laboris Lorem nostrud ut. Sunt laborum eiusmod ullamco."
+						}
+					}
+				]
+			},
+			"imageDesktop": {
+				"origin": {
+					"id": "dqE4raxMqlo",
+					"url": "https://images.unsplash.com/photo-1486944670663-e0a2ea5018eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxNXx8d2ludGVyJTIwY290dGFnZXxlbnwwfHx8fDE3MDk5MjU1MTl8MA&ixlib=rb-4.0.3&q=85",
+					"width": 4000,
+					"height": 6000
+				},
+				"url": "https://images.unsplash.com/photo-1486944670663-e0a2ea5018eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxNXx8d2ludGVyJTIwY290dGFnZXxlbnwwfHx8fDE3MDk5MjU1MTl8MA&ixlib=rb-4.0.3&q=85",
+				"width": 4000,
+				"height": 6000,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"alt": "snow covered wooden house during daytime",
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"imageMobile": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+					"width": 5243,
+					"height": 3495
+				},
+				"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+				"width": 5243,
+				"height": 3495,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Läs mer här"
+						}
+					]
+				]
+			}
+		]
+	}
+]

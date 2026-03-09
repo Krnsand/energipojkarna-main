@@ -1,0 +1,11 @@
+@use '@/styles/mixins';
+
+.energyLabel {
+  position: relative;
+  @include mixins.fluid(width, 70px);
+  @include mixins.fluid(height, 32px);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

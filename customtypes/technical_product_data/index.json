@@ -1,0 +1,42 @@
+{
+  "id": "technical_product_data",
+  "label": "Technical Product Data",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "category": {
+        "type": "Select",
+        "config": {
+          "label": "Category",
+          "placeholder": "",
+          "options": [
+            "Värme",
+            "Kyla",
+            "Inomhusdel",
+            "Utomhusdel",
+            "El",
+            "Köldmedium",
+            "Rekommendation",
+            "Modellbeteckning",
+            "Trygghet"
+          ]
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "unit": {
+        "type": "Text",
+        "config": {
+          "label": "Unit",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

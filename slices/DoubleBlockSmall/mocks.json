@@ -1,0 +1,166 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default-slice",
+		"primary": {
+			"backgroundColor": {
+				"__TYPE__": "FieldContent",
+				"value": "White",
+				"type": "Select"
+			},
+			"titleRow1": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Energipojkarna"
+			},
+			"titleRow2": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Vi hjälper dig"
+			},
+			"bodyText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Det finns många tillverkare och modeller att välja bland, så vilken är rätt för dig? Vår rekommendation är att du låter oss hjälpa dig välja. ",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"image": {
+				"url": "https://images.unsplash.com/photo-1599028274511-e02a767949a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxIZWF0ZXJ8ZW58MHx8fHwxNzA5OTMwMTYzfDA&ixlib=rb-4.0.3&q=85",
+				"alt": "white radiator heater beside brown wooden window",
+				"origin": {
+					"id": "ihx1LdtnGXw",
+					"url": "https://images.unsplash.com/photo-1599028274511-e02a767949a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxIZWF0ZXJ8ZW58MHx8fHwxNzA5OTMwMTYzfDA&ixlib=rb-4.0.3&q=85",
+					"width": 5960,
+					"height": 3973
+				},
+				"width": 5960,
+				"height": 3973,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Läs mer här"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "doubleBlockSmallWithVideo",
+		"primary": {
+			"backgroundColor": {
+				"__TYPE__": "FieldContent",
+				"value": "White",
+				"type": "Select"
+			},
+			"titleRow1": {
+				"__TYPE__": "FieldContent",
+				"value": "chair",
+				"type": "Text"
+			},
+			"titleRow2": {
+				"__TYPE__": "FieldContent",
+				"value": "west",
+				"type": "Text"
+			},
+			"bodyText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Velit tempor sit irure ipsum ex deserunt laboris. Magna elit aliqua id deserunt anim aliquip tempor deserunt voluptate nostrud commodo. Veniam fugiat pariatur aute pariatur non consequat nulla veniam."
+						}
+					}
+				]
+			},
+			"video": {
+				"embed_url": "https://twitter.com/prismicio/status/1354112310252630016",
+				"author_name": "Prismic",
+				"author_url": "https://twitter.com/prismicio",
+				"html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">We&#39;re launching a new <a href=\"https://twitter.com/hashtag/SliceContest?src=hash&amp;ref_src=twsrc%5Etfw\">#SliceContest</a> tomorrow along with Slice Machine upgrades.<br><br>Want to know more? Join us at tomorrow&#39;s Product Meet-up👇<a href=\"https://t.co/prYSypiAvB\">https://t.co/prYSypiAvB</a><br><br>We can&#39;t tell you any further details for now, but here&#39;s a sneak peek at the prizes👀 <a href=\"https://t.co/fV1eoGlEBh\">pic.twitter.com/fV1eoGlEBh</a></p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1354112310252630016?ref_src=twsrc%5Etfw\">January 26, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+				"type": "rich",
+				"cache_age": "3153600000",
+				"provider_name": "Twitter",
+				"provider_url": "http://www.twitter.com/",
+				"version": "1.0",
+				"all": {
+					"embed_url": "https://twitter.com/prismicio/status/1354112310252630016",
+					"author_name": "Prismic",
+					"author_url": "https://twitter.com/prismicio",
+					"html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">We&#39;re launching a new <a href=\"https://twitter.com/hashtag/SliceContest?src=hash&amp;ref_src=twsrc%5Etfw\">#SliceContest</a> tomorrow along with Slice Machine upgrades.<br><br>Want to know more? Join us at tomorrow&#39;s Product Meet-up👇<a href=\"https://t.co/prYSypiAvB\">https://t.co/prYSypiAvB</a><br><br>We can&#39;t tell you any further details for now, but here&#39;s a sneak peek at the prizes👀 <a href=\"https://t.co/fV1eoGlEBh\">pic.twitter.com/fV1eoGlEBh</a></p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1354112310252630016?ref_src=twsrc%5Etfw\">January 26, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+					"width": 550,
+					"height": null,
+					"type": "rich",
+					"cache_age": "3153600000",
+					"provider_name": "Twitter",
+					"provider_url": "http://www.twitter.com/",
+					"version": "1.0"
+				},
+				"__TYPE__": "EmbedContent"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "sweet",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 32" width="70" height="32" preserveAspectRatio="none"> 
+<path id="A+-value" d="M 0 16 L 16 32 h 70 v-32 h -70Z" style="fill:#ed1c24;">
+</path>
+<text id="text" class="basic-text-svg" font-family="'Arial'" font-size="24" dx="22" dy="24" fill="#FFFFFF">
+E<tspan font-size="10" dx="1" dy="-10"></tspan></text>
+</svg>

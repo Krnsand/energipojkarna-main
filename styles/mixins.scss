@@ -1,0 +1,65 @@
+@use 'variables';
+@forward 'jalp' with (
+  $breakpoints: variables.$grid-breakpoints
+);
+
+@use 'jalp';
+
+@mixin container() {
+  & {
+    @include jalp.fluid(
+      (padding-left, padding-right),
+      variables.$grid-gutter-mobile * 2,
+      variables.$grid-gutter-tablet * 2,
+      variables.$grid-gutter
+    );
+  }
+}
+
+@mixin grid(
+  $columnsMobile: variables.$grid-columns-mobile,
+  $columnsTablet: variables.$grid-columns-tablet,
+  $columns: variables.$grid-columns,
+  $withRowGap: true,
+  $withColumnGap: true
+) {
+  & {
+    display: grid;
+    grid-template-columns: repeat($columnsMobile, minmax(0, 1fr));
+
+    @if ($withRowGap && $withColumnGap) {
+      @include jalp.fluid(
+        grid-gap,
+        variables.$grid-gutter-mobile,
+        variables.$grid-gutter-tablet,
+        variables.$grid-gutter
+      );
+    } @else {
+      @if ($withRowGap) {
+        @include jalp.fluid(
+          grid-row-gap,
+          variables.$grid-gutter-mobile,
+          variables.$grid-gutter-tablet,
+          variables.$grid-gutter
+        );
+      }
+
+      @if ($withColumnGap) {
+        @include jalp.fluid(
+          grid-column-gap,
+          variables.$grid-gutter-mobile,
+          variables.$grid-gutter-tablet,
+          variables.$grid-gutter
+        );
+      }
+    }
+
+    @include jalp.onTabletUp {
+      grid-template-columns: repeat($columnsTablet, minmax(0, 1fr));
+    }
+
+    @include jalp.onDesktopMinUp {
+      grid-template-columns: repeat($columns, minmax(0, 1fr));
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "product_list",
+  "type": "SharedSlice",
+  "name": "ProductList",
+  "description": "ProductList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ProductList",
+      "primary": {},
+      "items": {
+        "product": {
+          "type": "Link",
+          "config": {
+            "label": "Product",
+            "select": "document",
+            "customtypes": [
+              "product"
+            ]
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

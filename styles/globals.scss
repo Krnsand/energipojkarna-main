@@ -1,0 +1,438 @@
+@use 'sass:math';
+@use 'mixins';
+@use 'variables';
+@use 'text';
+
+@import '~reset-css';
+$ig-blue: var(--yellow);
+@import '~react-image-gallery/styles/scss/image-gallery.scss';
+
+.image-gallery-thumbnails-container {
+  display: flex;
+  justify-content: center;
+}
+.image-gallery-thumbnail {
+  border-radius: 8px;
+  background-color: var(--white);
+}
+.image-gallery-image {
+  border-radius: 8px;
+  background-color: var(--white);
+}
+@import 'text';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --black-rgb: 0, 0, 0;
+  --black: #000000;
+
+  --white-rgb: 255, 255, 255;
+  --white: #ffffff;
+
+  --green-rgb: 139, 181, 29;
+  --green: #8bb51d;
+
+  --green-secondary-rgb: 203, 213, 11;
+  --green-secondary: #cbd50b;
+
+  --yellow-rgb: 255, 221, 0;
+  --yellow: #ffdd00;
+
+  --blue-rgb: 26, 161, 220;
+  --blue: #1aa1dc;
+
+  --light-grey-rgb: 245, 245, 245;
+  --light-grey: #f5f5f5;
+
+  --grey-rgb: 53, 62, 69;
+  --grey: #353e45;
+
+  --red-rgb: 255, 99, 71;
+  --red: #ff6347;
+
+  --viewport-height: 100vh;
+  @supports (-webkit-touch-callout: none) {
+    --viewport-height: -webkit-fill-available;
+  }
+
+  @include mixins.fluid(
+    --header-height,
+    variables.$header-height-mobile,
+    variables.$header-height-tablet,
+    variables.$header-height
+  );
+}
+
+@import 'algolia-instant-search';
+
+.aa-Panel {
+  z-index: 99999;
+}
+.aa-Form {
+  &:focus-within {
+    box-shadow: none;
+  }
+  label {
+    margin-top: inherit;
+  }
+}
+
+body {
+  color: var(--grey);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  overflow-y: scroll;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+.grid {
+  @include mixins.grid();
+}
+
+.container {
+  @include mixins.container();
+}
+
+.avoid-header {
+  @include mixins.onMobile {
+    margin-top: var(--header-height);
+  }
+}
+
+.hide-on-mobile {
+  @include mixins.onMobile {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.on-mobile {
+  display: none;
+
+  @include mixins.onMobile {
+    display: block;
+  }
+}
+
+.document {
+  @include mixins.onMobile {
+    padding-top: var(--header-height);
+  }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+}
+
+.text-color-green {
+  color: var(--green);
+}
+
+hr {
+  all: unset;
+  display: block;
+  background-color: rgb(var(--grey-rgb), 0.2);
+  width: 100%;
+  height: 1px;
+  @include mixins.fluid((margin-top, margin-bottom), 20px);
+}
+
+a,
+button {
+  color: var(--green);
+  cursor: pointer;
+  text-decoration: none;
+  &:focus {
+    outline: 0;
+  }
+}
+
+h1,
+.h1 {
+  @include text.h1;
+}
+h2,
+.h2 {
+  @include text.h2;
+}
+h3,
+.h3 {
+  @include text.h3;
+}
+.subtitle {
+  @include text.subtitle;
+}
+body,
+.body1 {
+  @include text.body1;
+}
+.body2 {
+  @include text.body2;
+}
+.body3 {
+  @include text.body3;
+}
+.button1 {
+  @include text.button1;
+}
+.button2 {
+  @include button2;
+}
+.button3 {
+  @include text.button3;
+}
+.button4 {
+  @include text.button4;
+}
+.caption {
+  @include text.caption;
+}
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.richtext {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    color: var(--green);
+  }
+  img {
+    @include mixins.fluid(border-radius, 6px, 6px, 8px);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @include mixins.fluid(
+      margin-bottom,
+      variables.$grid-gutter-mobile,
+      variables.$grid-gutter-tablet,
+      variables.$grid-gutter
+    );
+  }
+  h4 {
+    @include text.subtitle;
+    color: var(--grey);
+  }
+  h4,
+  p,
+  ul {
+    display: block;
+    @include mixins.fluid(min-height, 24px, 30px, 32px, 35px);
+  }
+  a {
+    text-decoration: underline;
+  }
+  ul {
+    li {
+      position: relative;
+      @include mixins.fluid(
+        margin-top,
+        variables.$grid-gutter-mobile,
+        variables.$grid-gutter-tablet,
+        math.div(variables.$grid-gutter, 3) * 2
+      );
+      @include mixins.fluid(padding-left, 25px, 25px, 35px);
+      &:first-child {
+        margin-top: 0;
+      }
+      &:before {
+        position: absolute;
+        top: 6px;
+        @include mixins.fluid(top, 6px, 8px, 10px, 8.5px);
+        left: 0;
+        content: '';
+        background-image: url(../public/checkmark-mobile.svg);
+        background-repeat: no-repeat;
+        @include mixins.fluid(
+          (width, height, background-size),
+          14px,
+          16px,
+          18px,
+          20px
+        );
+        @include mixins.fluid(
+          padding-right,
+          variables.$grid-gutter-mobile,
+          variables.$grid-gutter-tablet,
+          variables.$grid-gutter * 2
+        );
+        @include mixins.onDesktopMinUp {
+          background-image: url(../public/checkmark-desktop.svg);
+        }
+        // @inclus
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.richtext-white {
+  @extend .richtext;
+  color: var(--white);
+  p {
+    color: rgba(var(--white-rgb), 0.6);
+  }
+  ul {
+    li {
+      &:before {
+        background-image: url(../public/checkmark-mobile-white.svg);
+        @include mixins.onDesktopMinUp {
+          background-image: url(../public/checkmark-desktop-white.svg);
+        }
+      }
+    }
+  }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+  background-color: var(--light-grey);
+  border: none;
+  outline: none;
+  width: 100%;
+  @include text.body2;
+  @include mixins.fluid(border-radius, 6px, 6px, 8px);
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 1.5,
+    variables.$grid-gutter-tablet * 1.5,
+    math.div(variables.$grid-gutter, 3) * 2
+  );
+  @include mixins.fluid(
+    (padding-left, padding-right),
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    math.div(variables.$grid-gutter, 3) * 2
+  );
+  @include mixins.fluid(
+    margin-bottom,
+    variables.$grid-gutter-mobile,
+    variables.$grid-gutter-tablet,
+    math.div(variables.$grid-gutter, 3)
+  );
+  border: 1px solid var(--light-grey);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  &.has-value {
+    background-color: var(--white);
+    border-color: rgba(var(--grey-rgb), 0.3);
+  }
+  &.error {
+    background-color: var(--white);
+    border-color: var(--red);
+  }
+
+  &.small {
+    @include mixins.fluid(
+      (padding-top, padding-bottom),
+      variables.$grid-gutter-mobile * 1,
+      variables.$grid-gutter-tablet * 1,
+      math.div(variables.$grid-gutter, 3) * 1
+    );
+    @include mixins.fluid(
+      (padding-left, padding-right),
+      variables.$grid-gutter-mobile * 1,
+      variables.$grid-gutter-tablet * 1,
+      math.div(variables.$grid-gutter, 3) * 1
+    );
+  }
+}
+
+input[type='checkbox'] {
+  margin: 0;
+  @include mixins.fluid(
+    margin-right,
+    variables.$grid-gutter-mobile,
+    variables.$grid-gutter-tablet,
+    math.div(variables.$grid-gutter, 3)
+  );
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile * 0.5,
+    variables.$grid-gutter-tablet * 0.5,
+    0px
+  );
+}
+
+label {
+  display: flex;
+  align-items: flex-start;
+  @include text.body1;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    variables.$grid-gutter
+  );
+  @include mixins.fluid(
+    padding-left,
+    variables.$grid-gutter-mobile * 3,
+    variables.$grid-gutter-tablet * 3,
+    variables.$grid-gutter
+  );
+  @include mixins.onDesktopMinUp {
+    @include text.body2;
+    color: var(--grey);
+    align-items: center;
+  }
+  &.error {
+    span {
+      border-color: var(--red);
+    }
+  }
+  input {
+    display: none;
+    &:checked + span {
+      background-color: var(--green);
+      border-color: var(--green);
+    }
+  }
+  span {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(var(--grey-rgb), 0.3);
+    @include mixins.fluid(border-radius, 4px, 4px, 4px);
+    @include mixins.fluid(margin-top, 3px, 3px, 0px);
+    @include mixins.fluid(
+      (width, height),
+      variables.$grid-gutter-mobile * 2,
+      variables.$grid-gutter-tablet * 2,
+      math.div(variables.$grid-gutter, 3) * 2
+    );
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
+.grecaptcha-badge {
+  z-index: 9;
+}

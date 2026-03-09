@@ -1,0 +1,12 @@
+.searchInput {
+  height: 100%;
+  flex: 1;
+}
+
+.results {
+  background-color: var(--white);
+  top: calc(100%);
+  left: 0;
+  width: 100%;
+  position: absolute;
+}

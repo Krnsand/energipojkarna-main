@@ -1,0 +1,106 @@
+@use 'sass:math';
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.formWrapper {
+  @include mixins.fluid(
+    (padding-left, padding-right),
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2
+  );
+  position: relative;
+  z-index: 2;
+  // @include mixins.grid(4, 12, 12, false);
+  // @include mixins.onDesktopMinUp {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  // }
+}
+
+.formContent {
+  grid-column: 1 / -1;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  // @include mixins.onTabletUp {
+  //   grid-column: 3 / span 8;
+  // }
+  // @include mixins.onDesktopMinUp {
+  //   grid-column: 1 / -1;
+  // }
+}
+
+.logoWrapper {
+  display: flex;
+  position: relative;
+  z-index: 4;
+  svg {
+    @include mixins.fluid(height, 30px, 30px, 30px);
+  }
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--green);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  @include mixins.fluid(border-radius, 8px, 8px, 12px);
+  @include mixins.onTabletDown {
+    width: 100%;
+  }
+  @include mixins.onDesktopMinUp {
+    @include mixins.fluid(width, 0px, 320px, 658px);
+  }
+}
+
+.formLoaded {
+  transition: min-height 0.6s ease;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  @include mixins.fluid(
+    margin-bottom,
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    math.div(variables.$grid-gutter, 3) * 4
+  );
+}
+
+.formHeight,
+.resultHeight {
+  width: 100%;
+  position: absolute;
+  @include mixins.fluid(
+    padding,
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    variables.$grid-gutter
+  );
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.formHeightShow,
+.resultHeightShow {
+  opacity: 1;
+  z-index: 2;
+}
+
+.formHeightShow {
+  @extend .formHeight;
+}
+
+.resultHeightShow {
+  @extend .resultHeight;
+}

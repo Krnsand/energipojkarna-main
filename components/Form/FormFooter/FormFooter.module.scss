@@ -1,0 +1,24 @@
+@use 'sass:math';
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.formFooter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 4,
+    variables.$grid-gutter * 2
+  );
+}
+
+.logoWrapper {
+  display: flex;
+  position: relative;
+  z-index: 4;
+  svg {
+    @include mixins.fluid(height, 30px, 30px, 30px);
+  }
+}

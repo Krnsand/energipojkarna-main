@@ -1,0 +1,66 @@
+{
+  "id": "page",
+  "label": "Page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Url",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "double_block_small": {
+              "type": "SharedSlice"
+            },
+            "double_block_large": {
+              "type": "SharedSlice"
+            },
+            "statement": {
+              "type": "SharedSlice"
+            },
+            "hero_small": {
+              "type": "SharedSlice"
+            },
+            "text_block": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Seo": {
+      "metaTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

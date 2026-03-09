@@ -1,0 +1,162 @@
+@use '@/styles/mixins';
+@use '@/styles/functions';
+@use '@/styles/variables';
+
+.outerContainer {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  background-color: var(--white);
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100vw;
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+  min-height: calc(100vh - var(--header-height));
+  @include mixins.onTabletUp {
+    min-height: calc(
+      100vh - #{functions.calc-interpolation(
+          variables.$header-height-tablet,
+          variables.$header-height,
+          map-get(variables.$grid-breakpoints, 'tablet'),
+          map-get(variables.$grid-breakpoints, 'desktop-min')
+        )}
+    );
+  }
+  @include mixins.onDesktop {
+    min-height: calc(100vh - #{functions.get-vw(variables.$header-height)});
+  }
+  align-items: flex-end;
+  @include mixins.onTabletUp {
+    position: relative;
+    @include mixins.container;
+    @include mixins.grid(4, 12, 12, false, true);
+    // @media (max-aspect-ratio: 12 / 9) {
+    //   min-height: 0;
+    //   aspect-ratio: 16 / 9;
+    // }
+  }
+}
+
+.content {
+  @include mixins.onMobile {
+    background: rgb(var(--white-rgb));
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: variables.$grid-gutter-mobile * 2;
+    padding-right: variables.$grid-gutter-mobile * 2;
+
+    &:before {
+      content: '';
+      height: 100px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      transform: translateY(-100%);
+      background: linear-gradient(
+        0deg,
+        rgba(var(--white-rgb), 1) 0%,
+        rgba(var(--white-rgb), 0) 100%
+      );
+    }
+  }
+  @include mixins.onTabletUp {
+    grid-column: 1 / -1;
+    grid-column: span 8;
+    @include mixins.grid(4, 8, 8, false, false);
+    @include mixins.fluid(
+      padding-left,
+      variables.$grid-gutter-mobile,
+      variables.$grid-gutter-tablet,
+      variables.$grid-gutter
+    );
+  }
+  @include mixins.fluid(
+    padding-top,
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    variables.$grid-gutter * 2
+  );
+  @include mixins.fluid(
+    padding-bottom,
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 4,
+    variables.$grid-gutter * 2
+  );
+}
+
+.title {
+  grid-column: 1 / -1;
+  color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  span:first-child {
+    color: var(--green);
+  }
+}
+
+.text {
+  grid-column: span 6;
+  color: var(--grey-light);
+  opacity: 0.6;
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+}
+
+.buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    variables.$grid-gutter
+  );
+  .buttonWrapper {
+    @include mixins.fluid(
+      margin-left,
+      variables.$grid-gutter-mobile,
+      variables.$grid-gutter-tablet,
+      variables.$grid-gutter
+    );
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.imageWrapper {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    object-fit: contain;
+    object-position: right center;
+  }
+  @include mixins.onTabletUp {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    @include mixins.fluid(
+      right,
+      -(variables.$grid-gutter-mobile * 2),
+      -(variables.$grid-gutter-tablet * 2),
+      -(variables.$grid-gutter)
+    );
+  }
+}

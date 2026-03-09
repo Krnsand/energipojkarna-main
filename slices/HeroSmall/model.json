@@ -1,0 +1,81 @@
+{
+  "id": "hero_small",
+  "type": "SharedSlice",
+  "name": "HeroSmall",
+  "description": "HeroSmall",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroSmall",
+      "primary": {
+        "backgroundColor": {
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "White",
+              "Green"
+            ],
+            "default_value": "White"
+          },
+          "type": "Select"
+        },
+        "caption": {
+          "config": {
+            "label": "Caption",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading1,heading2"
+          },
+          "type": "StructuredText"
+        },
+        "wideTitle": {
+          "config": {
+            "label": "Wide Title",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": false
+          },
+          "type": "Boolean"
+        },
+        "subtitle": {
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

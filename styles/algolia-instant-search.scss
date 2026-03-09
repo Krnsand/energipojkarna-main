@@ -1,0 +1,116 @@
+@use '@/styles/mixins';
+.ais-SearchBox-form {
+  position: relative;
+  display: flex;
+  height: 100%;
+  input[type='search']::-webkit-search-decoration,
+  input[type='search']::-webkit-search-cancel-button,
+  input[type='search']::-webkit-search-results-button,
+  input[type='search']::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+
+  outline: medium none currentColor;
+  border: 1px solid rgba(var(--grey-rgb), 0.3);
+  border-radius: 3px;
+  &:focus-within {
+    border-color: rgba(var(--green-rgb), 1);
+  }
+
+  .ais-SearchBox-input,
+  .ais-SearchBox-reset,
+  .ais-SearchBox-submit {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mixins.fluid((padding-left, padding-right), 10px, 10px, 20px);
+  }
+
+  .ais-SearchBox-submit {
+    order: 0;
+    svg {
+      @include mixins.fluid((width, height), 16px);
+      fill: rgba(var(--green-rgb), 1);
+    }
+  }
+  .ais-SearchBox-loadingIndicator {
+    display: none;
+  }
+  .ais-SearchBox-input {
+    order: 1;
+    border: 0;
+    outline: none;
+    flex: 1;
+    padding: 0;
+  }
+  .ais-SearchBox-reset {
+    order: 2;
+    background-color: transparent;
+    &[hidden] {
+      display: block;
+      visibility: hidden;
+    }
+    svg {
+      fill: rgba(var(--green-rgb), 0.6);
+      @include mixins.fluid((width, height), 12px);
+    }
+    &:hover {
+      cursor: pointer;
+      svg {
+        fill: rgba(var(--green-rgb), 1);
+      }
+    }
+  }
+}
+
+.ais-Hits {
+  border-radius: 3px;
+
+  &:not(.ais-Hits--empty) {
+    border-radius: 3px;
+    border: 1px solid rgba(var(--grey-rgb), 0.1);
+  }
+
+  .aa-ItemLink {
+    color: var(--grey);
+  }
+  .ais-Hits-item {
+    @include mixins.fluid(margin, 5px);
+    border-radius: 3px;
+    &:hover {
+      background-color: rgba(var(--blue-rgb), 0.1);
+    }
+  }
+  .aa-ItemContent {
+    display: flex;
+    align-items: center;
+    @include mixins.fluid(gap, 10px);
+    @include mixins.fluid(padding, 5px);
+    @include mixins.fluid(height, 80px, 120px);
+    .aa-ItemIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mixins.fluid(padding, 3px);
+      @include mixins.fluid(width, 80px);
+      max-height: 100%;
+      background-color: var(--white);
+      border-radius: 3px;
+      border: 1px solid rgba(var(--grey-rgb), 0.1);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .aa-ItemContentBody {
+      @include mixins.fluid(padding, 10px);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

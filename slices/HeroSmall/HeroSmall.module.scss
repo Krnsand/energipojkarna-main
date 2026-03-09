@@ -1,0 +1,105 @@
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.container {
+  background-color: var(--white);
+  @include mixins.container;
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 5,
+    variables.$grid-gutter-tablet * 5,
+    variables.$grid-gutter * 5
+  );
+  @include mixins.onTabletUp {
+    @include mixins.grid;
+  }
+  .content {
+    .title {
+      color: var(--green);
+    }
+  }
+}
+
+.containerGreen {
+  @extend .container;
+  background-color: var(--green);
+  .content {
+    .caption {
+      color: var(--white);
+    }
+    .subtitle,
+    .title {
+      color: var(--white);
+    }
+  }
+}
+
+.content {
+  grid-column: 1 / -1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include mixins.onTabletUp {
+    grid-column: 2 / span 10;
+    @include mixins.grid(4, 10, 10 false);
+  }
+  @include mixins.onDesktopMinUp {
+    grid-column: 3 / span 8;
+    @include mixins.grid(4, 8, 8, false);
+  }
+  > div {
+    align-self: center;
+  }
+}
+
+.caption,
+.title,
+.subtitle,
+.buttonWrapper {
+  grid-column: 1 / -1;
+  @include mixins.onTabletUp {
+    grid-column: 2 / span 8;
+  }
+  @include mixins.onDesktopMinUp {
+    grid-column: 2 / span 6;
+  }
+}
+.caption {
+  @include mixins.fluid(
+    margin-bottom,
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    variables.$grid-gutter
+  );
+}
+
+.titleWide {
+  @extend .title;
+  @include mixins.onTabletUp {
+    grid-column: 1 / span 10;
+  }
+  @include mixins.onDesktopMinUp {
+    grid-column: 1 / span 8;
+  }
+}
+
+.subtitle {
+  color: var(--grey);
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+}
+
+.buttonWrapper {
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 4,
+    variables.$grid-gutter * 2
+  );
+}

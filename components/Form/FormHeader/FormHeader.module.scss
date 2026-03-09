@@ -1,0 +1,43 @@
+@use 'sass:math';
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @include mixins.fluid(
+    margin-bottom,
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    variables.$grid-gutter * 2
+  );
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile,
+    variables.$grid-gutter-tablet,
+    variables.$grid-gutter
+  );
+  .logoWrapper {
+    display: flex;
+    position: relative;
+    z-index: 4;
+    svg {
+      @include mixins.fluid(height, 30px, 30px, 30px);
+    }
+    @include mixins.fluid(
+      margin-bottom,
+      variables.$grid-gutter-mobile * 2,
+      variables.$grid-gutter-tablet * 2,
+      variables.$grid-gutter
+    );
+  }
+  .title {
+    color: var(--white);
+  }
+  .subtitle {
+    color: var(--light-grey);
+  }
+}

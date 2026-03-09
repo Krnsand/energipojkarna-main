@@ -1,0 +1,35 @@
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.container {
+  @include mixins.fluid(
+    (margin-top, margin-bottom),
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 4
+  );
+  background-color: var(--white);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include mixins.onTabletUp {
+    width: 100%;
+    flex-direction: row;
+  }
+  justify-content: center;
+  text-align: center;
+}
+.title {
+  @include mixins.fluid(
+    (margin-bottom),
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2
+  );
+}
+.text {
+  @include mixins.fluid(
+    (margin-bottom),
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2
+  );
+}

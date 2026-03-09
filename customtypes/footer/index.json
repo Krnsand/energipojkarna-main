@@ -1,0 +1,74 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Links": {
+      "menu_links": {
+        "type": "Group",
+        "config": {
+          "label": "Menu Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Besök oss": {
+      "visit_us_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "hyperlink"
+        }
+      }
+    },
+    "Kontakta oss": {
+      "contact_us_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "hyperlink"
+        }
+      }
+    },
+    "Partners": {
+      "partner_logos": {
+        "type": "Group",
+        "config": {
+          "label": "Partner logos",
+          "fields": {
+            "image": {
+              "type": "Link",
+              "config": {
+                "label": "Image",
+                "placeholder": "",
+                "select": "media"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

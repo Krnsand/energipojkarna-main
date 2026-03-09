@@ -1,0 +1,53 @@
+@use 'sass:math';
+
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.container {
+  background-color: var(--white);
+}
+
+.content {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  @include mixins.onTabletUp {
+    grid-column: 3 / span 8;
+  }
+  @include mixins.onDesktopMinUp {
+    grid-column: 4 / span 6;
+  }
+
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 6,
+    variables.$grid-gutter-tablet * 6,
+    variables.$grid-gutter * 4
+  );
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 4,
+    variables.$grid-gutter * 2
+  );
+  .buttonWrapper {
+    @include mixins.fluid(
+      margin-left,
+      variables.$grid-gutter-mobile,
+      variables.$grid-gutter-tablet,
+      variables.$grid-gutter
+    );
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

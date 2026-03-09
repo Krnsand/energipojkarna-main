@@ -1,0 +1,10 @@
+{
+  "repositoryName": "energipojkarna",
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "libraries": [
+    "./slices"
+  ],
+  "adapter": "@slicemachine/adapter-next",
+  "_latest": "0.5.0",
+  "generateTypes": false
+}

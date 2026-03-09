@@ -1,0 +1,212 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default-slice",
+		"primary": {
+			"titleRow1": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Ett litet steg",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"titleRow2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "En enorm förändring",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"bodyText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Värmer du fortfarande upp din bostad med dyra energikällor som direktvärkande el? Du är inte ensam. Men att ta steget till en smart och effektiv uppvärmning innebär många fördelar och har aldrig varit enklare. Vi hjälper dig att snabbt komma igång och skäddarsyr systemet efter era behov. Vill du veta mer? Hör av dig så tar vi ett möte.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Så funkar detBoka rådgivning",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"graphicElements": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Så funkar det"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Boka rådgivning"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "statementWithBackground",
+		"primary": {
+			"titleRow1": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Energipojkarna",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"titleRow2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Vi kan värme och kyla",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"bodyText": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Värmer du fortfarande upp din bostad med dyra energikällor som direktvärkande el? Du är inte ensam. Men att ta steget till en smart och effektiv uppvärmning innebär många fördelar och har aldrig varit enklare. Vi hjälper dig att snabbt komma igång och skäddarsyr systemet efter era behov. Vill du veta mer? Hör av dig så tar vi ett möte.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"graphicElements": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"dimBackground": {
+				"__TYPE__": "FieldContent",
+				"value": "40",
+				"type": "Select"
+			},
+			"backgroundImage": {
+				"url": "https://images.unsplash.com/photo-1487424439918-bc6b5bef0380?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxXaW50ZXJ8ZW58MHx8fHwxNzA5OTI3MzUwfDA&ixlib=rb-4.0.3&q=85",
+				"alt": "bird's eye view photography of pine trees during winter",
+				"origin": {
+					"id": "X9QnU-h3X_8",
+					"url": "https://images.unsplash.com/photo-1487424439918-bc6b5bef0380?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxXaW50ZXJ8ZW58MHx8fHwxNzA5OTI3MzUwfDA&ixlib=rb-4.0.3&q=85",
+					"width": 3992,
+					"height": 2242
+				},
+				"width": 3992,
+				"height": 2242,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLink",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
+					],
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Läs mer"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"buttonLabel",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Boka rådvining"
+						}
+					]
+				]
+			}
+		]
+	}
+]

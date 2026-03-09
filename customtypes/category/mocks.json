@@ -1,0 +1,17 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "shaking"
+    },
+    "name": {
+      "__TYPE__": "FieldContent",
+      "value": "garden",
+      "type": "Text"
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": []
+    }
+  }
+]

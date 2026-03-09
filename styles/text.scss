@@ -1,0 +1,86 @@
+@use 'typography';
+@use 'mixins';
+
+@mixin h1 {
+  font-family: typography.$nunito-sans;
+  @include mixins.fluid(font-size, 30px, 30px, 80px, 100px);
+  @include mixins.fluid(line-height, 40px, 40px, 90px, 110px);
+}
+
+@mixin h2 {
+  font-family: typography.$nunito-sans;
+  @include mixins.fluid(font-size, 30px, 30px, 50px, 60px);
+  @include mixins.fluid(line-height, 40px, 40px, 65px, 75px);
+}
+
+@mixin h3 {
+  font-family: typography.$nunito-sans;
+  @include mixins.fluid(font-size, 20px, 20px, 30px, 40px);
+  @include mixins.fluid(line-height, 30px, 30px, 40px, 55px);
+}
+
+@mixin subtitle {
+  font-family: typography.$open-sans;
+  font-weight: 300;
+  @include mixins.fluid(font-size, 18px, 18px, 20px, 30px);
+  @include mixins.fluid(line-height, 28px, 28px, 30px, 45px);
+}
+
+@mixin body1 {
+  font-family: typography.$open-sans;
+  font-weight: 300;
+  @include mixins.fluid(font-size, 14px, 16px, 18px, 20px);
+  @include mixins.fluid(line-height, 24px, 30px, 32px, 35px);
+}
+
+@mixin body2 {
+  font-family: typography.$open-sans;
+  font-weight: 400;
+  @include mixins.fluid(font-size, 12px, 14px, 14px, 15px);
+  @include mixins.fluid(line-height, 18px, 24px, 24px, 25px);
+}
+
+@mixin body3 {
+  font-family: typography.$open-sans;
+  font-weight: 400;
+  @include mixins.fluid(font-size, 12px);
+  @include mixins.fluid(line-height, 18px);
+}
+
+@mixin button1 {
+  font-family: typography.$open-sans;
+  font-weight: 400;
+  @include mixins.fluid(font-size, 14px, 14px, 16px, 20px);
+  @include mixins.fluid(line-height, 24px, 24px, 28px, 35px);
+}
+
+@mixin button2 {
+  font-family: typography.$open-sans;
+  font-weight: 400;
+  @include mixins.fluid(font-size, 12px, 12px, 14px, 16px);
+  @include mixins.fluid(line-height, 18px, 18px, 24px, 28px);
+}
+
+@mixin button3 {
+  font-family: typography.$open-sans;
+  font-weight: 400;
+  text-transform: uppercase;
+  @include mixins.fluid(font-size, 12px, 12px, 14px, 14px);
+  @include mixins.fluid(line-height, 12px, 12px, 24px, 24px);
+  @include mixins.fluid(letter-spacing, 0.6px, 0.6px, 0.7px, 0.7px);
+}
+
+@mixin button4 {
+  font-family: typography.$open-sans;
+  @include mixins.fluid(font-size, 10px, 10px, 12px);
+  @include mixins.fluid(line-height, 20px, 20px, 12px);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+@mixin caption {
+  font-family: typography.$open-sans;
+  @include mixins.fluid(font-size, 10px, 10px, 12px, 14px);
+  @include mixins.fluid(line-height, 15px, 15px, 18px, 22px);
+  font-weight: 400;
+  color: var(--grey);
+}

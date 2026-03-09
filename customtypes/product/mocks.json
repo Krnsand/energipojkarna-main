@@ -1,0 +1,180 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "tank"
+    },
+    "name": {
+      "__TYPE__": "FieldContent",
+      "value": "create",
+      "type": "Text"
+    },
+    "brand": {
+      "__TYPE__": "LinkContent",
+      "value": {
+        "__TYPE__": "DocumentLink",
+        "id": "mock_document_id"
+      }
+    },
+    "category": {
+      "__TYPE__": "LinkContent",
+      "value": {
+        "__TYPE__": "DocumentLink",
+        "id": "mock_document_id"
+      }
+    },
+    "energy": {
+      "__TYPE__": "FieldContent",
+      "value": "G",
+      "type": "Select"
+    },
+    "size": {
+      "__TYPE__": "FieldContent",
+      "value": "minerals",
+      "type": "Text"
+    },
+    "effect": {
+      "__TYPE__": "FieldContent",
+      "value": "sport",
+      "type": "Text"
+    },
+    "five_year_warranty": {
+      "__TYPE__": "BooleanContent",
+      "value": true
+    },
+    "short_description": {
+      "__TYPE__": "FieldContent",
+      "value": "wait",
+      "type": "Text"
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": []
+    },
+    "techinal_data": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "entry",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "DocumentLink",
+                  "id": "mock_document_id"
+                }
+              }
+            ],
+            [
+              "value",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "desk",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "primary_image": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+        "width": 4000,
+        "height": 6000
+      },
+      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+      "width": 4000,
+      "height": 6000,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "images": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "image",
+              {
+                "__TYPE__": "ImageContent",
+                "origin": {
+                  "id": "main",
+                  "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+                  "width": 3168,
+                  "height": 4752
+                },
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+                "width": 3168,
+                "height": 4752,
+                "edit": {
+                  "zoom": 1,
+                  "crop": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "background": "transparent"
+                },
+                "thumbnails": {}
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "documents": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "name",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "ill",
+                "type": "Text"
+              }
+            ],
+            [
+              "file",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "id": "mock_Media_link",
+                  "kind": "image/jpeg",
+                  "name": "mock_name",
+                  "url": "https://source.unsplash.com/daily",
+                  "size": "0",
+                  "__TYPE__": "FileLink"
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "metaTitle": {
+      "__TYPE__": "FieldContent",
+      "value": "kind",
+      "type": "Text"
+    },
+    "metaDescription": {
+      "__TYPE__": "FieldContent",
+      "value": "unhappy",
+      "type": "Text"
+    }
+  }
+]

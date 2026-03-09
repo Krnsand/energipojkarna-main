@@ -1,0 +1,107 @@
+{
+  "id": "product_variant",
+  "type": "SharedSlice",
+  "name": "ProductVariant",
+  "description": "ProductVariant",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": ""
+          }
+        },
+        "energy": {
+          "type": "Select",
+          "config": {
+            "label": "Energy",
+            "placeholder": "Energy rating",
+            "options": [
+              "A+++",
+              "A++",
+              "A+",
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G"
+            ]
+          }
+        },
+        "size": {
+          "type": "Text",
+          "config": {
+            "label": "Size",
+            "placeholder": "200"
+          }
+        },
+        "effect": {
+          "type": "Text",
+          "config": {
+            "label": "Effect",
+            "placeholder": "5.5"
+          }
+        },
+        "effect_cold": {
+          "type": "Text",
+          "config": {
+            "label": "Cooling effect",
+            "placeholder": "3.5"
+          }
+        },
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "Price",
+            "placeholder": ""
+          }
+        },
+        "price_note": {
+          "type": "Text",
+          "config": {
+            "label": "Price note",
+            "placeholder": ""
+          }
+        },
+        "five_year_warranty": {
+          "type": "Boolean",
+          "config": {
+            "label": "5 year warranty",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": false
+          }
+        }
+      },
+      "items": {
+        "technical_data": {
+          "type": "Link",
+          "config": {
+            "label": "Technical data",
+            "select": "document",
+            "customtypes": [
+              "technical_product_data"
+            ]
+          }
+        },
+        "technical_data_value": {
+          "type": "Text",
+          "config": {
+            "label": "Value",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

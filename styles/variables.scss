@@ -1,0 +1,21 @@
+$grid-columns: 12;
+$grid-columns-tablet: 12;
+$grid-columns-mobile: 4;
+
+$grid-gutter: 30px;
+$grid-gutter-tablet: 10px;
+$grid-gutter-mobile: 10px;
+
+$header-height: 120px;
+$header-height-tablet: 80px;
+$header-height-mobile: 60px;
+
+$header-search-container-height: 80px;
+
+$top-bar-height: 35px;
+
+$grid-breakpoints: (
+  tablet: 768px,
+  desktop-min: 992px,
+  desktop: 1920px,
+);

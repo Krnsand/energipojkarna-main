@@ -1,0 +1,78 @@
+[
+  {
+    "menu_links": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "label",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "include",
+                "type": "Text"
+              }
+            ],
+            [
+              "link",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://twitter.com"
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "mobile_menu_buttons": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "label",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "bread",
+                "type": "Text"
+              }
+            ],
+            [
+              "link",
+              {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://prismic.io"
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "top_bar": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "label",
+              {
+                "__TYPE__": "FieldContent",
+                "value": "is",
+                "type": "Text"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  }
+]

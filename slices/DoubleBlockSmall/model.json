@@ -1,0 +1,149 @@
+{
+  "id": "double_block_small",
+  "type": "SharedSlice",
+  "name": "DoubleBlockSmall",
+  "description": "DoubleBlockSmall",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DoubleBlockSmall",
+      "primary": {
+        "backgroundColor": {
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "White",
+              "LightGrey"
+            ],
+            "default_value": "White"
+          },
+          "type": "Select"
+        },
+        "titleRow1": {
+          "type": "Text",
+          "config": {
+            "label": "Title Row 1",
+            "placeholder": ""
+          }
+        },
+        "titleRow2": {
+          "type": "Text",
+          "config": {
+            "label": "Title Row 2",
+            "placeholder": ""
+          }
+        },
+        "bodyText": {
+          "config": {
+            "label": "Body Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "items": {
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "doubleBlockSmallWithVideo",
+      "name": "Double Block Small With Video",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DoubleBlockSmall",
+      "primary": {
+        "backgroundColor": {
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "options": [
+              "White",
+              "LightGrey"
+            ],
+            "default_value": "White"
+          },
+          "type": "Select"
+        },
+        "titleRow1": {
+          "type": "Text",
+          "config": {
+            "label": "Title Row 1",
+            "placeholder": ""
+          }
+        },
+        "titleRow2": {
+          "type": "Text",
+          "config": {
+            "label": "Title Row 2",
+            "placeholder": ""
+          }
+        },
+        "bodyText": {
+          "config": {
+            "label": "Body Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "video": {
+          "config": {
+            "label": "Video",
+            "placeholder": ""
+          },
+          "type": "Embed"
+        }
+      },
+      "items": {
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

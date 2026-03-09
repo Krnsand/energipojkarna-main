@@ -1,0 +1,72 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"five_year_warranty": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"energy": {
+				"__TYPE__": "FieldContent",
+				"value": "2",
+				"type": "Select"
+			},
+			"size": {
+				"__TYPE__": "FieldContent",
+				"value": "pleasure",
+				"type": "Text"
+			},
+			"effect": {
+				"__TYPE__": "FieldContent",
+				"value": "pupil",
+				"type": "Text"
+			},
+			"effect_cold": {
+				"__TYPE__": "FieldContent",
+				"value": "toy",
+				"type": "Text"
+			},
+			"name": {
+				"__TYPE__": "FieldContent",
+				"value": "everywhere",
+				"type": "Text"
+			},
+			"price": {
+				"__TYPE__": "FieldContent",
+				"value": "37",
+				"type": "Number"
+			},
+			"price_note": {
+				"__TYPE__": "FieldContent",
+				"value": "airplane",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"technical_data",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "DocumentLink",
+								"id": "mock_document_id"
+							}
+						}
+					],
+					[
+						"technical_data_value",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "jump",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

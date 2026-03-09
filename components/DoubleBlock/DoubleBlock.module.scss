@@ -1,0 +1,284 @@
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.container {
+  background-color: var(--white);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include mixins.onTabletUp {
+    width: 100%;
+    flex-direction: row;
+    @include mixins.grid(4, 12, 12, false);
+  }
+}
+
+.textWrapper {
+  width: 100%;
+  position: relative;
+  // order: 1;
+  display: flex;
+  flex-direction: column;
+  // @include mixins.grid(4, 12, 12, false);
+  @include mixins.container;
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 6,
+    variables.$grid-gutter * 4
+  );
+
+  grid-column: 2 / span 5;
+}
+.textTextWrapper {
+  @include mixins.container;
+  grid-column: 2 / span 10;
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 6,
+    variables.$grid-gutter * 4
+  );
+}
+.textTextInnerWrapper {
+  display: grid;
+  @include mixins.grid(1, 2, 2);
+}
+
+.textInner {
+  display: flex;
+  flex-direction: column;
+  // grid-column: 1 / -1;
+
+  // @include mixins.onTabletUp {
+  //   grid-column: 2 / span 4;
+  // }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  @include mixins.fluid(
+    margin-bottom,
+    variables.$grid-gutter-mobile * 2,
+    variables.$grid-gutter-tablet * 2,
+    variables.$grid-gutter
+  );
+  span:last-child {
+    color: var(--green);
+  }
+}
+.buttons {
+  display: flex;
+  @include mixins.fluid(
+    margin-top,
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 4,
+    variables.$grid-gutter * 2
+  );
+  .buttonWrapper {
+    @include mixins.fluid(
+      margin-left,
+      variables.$grid-gutter-mobile,
+      variables.$grid-gutter-tablet,
+      variables.$grid-gutter
+    );
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.rightWrapper {
+  width: 100%;
+  display: flex;
+  align-self: baseline;
+  grid-column: 7 / span 5;
+  justify-content: center;
+  @include mixins.fluid(
+    (padding-top),
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 6,
+    variables.$grid-gutter * 4
+  );
+}
+
+.rightWrapperFull {
+  grid-column: 7 / -1;
+  padding-top: unset !important;
+}
+
+.image {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.stretchImage {
+  object-fit: fill;
+}
+
+.rightWrapperForm {
+  grid-column: 7 / span 5;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  @include mixins.fluid(
+    (padding-top),
+    variables.$grid-gutter-mobile * 4,
+    variables.$grid-gutter-tablet * 6,
+    variables.$grid-gutter * 4
+  );
+}
+
+.videoWrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  .videoInner {
+    aspect-ratio: 16 / 9;
+    video,
+    iframe {
+      position: relative;
+      width: 100vw;
+      height: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
+
+.previewWrapper {
+  z-index: 999;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  .youtubeImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .previewButtonWrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    @include mixins.onDesktopMinUp {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        @include mixins.fluid((margin-left, margin-top), -80px, -80px, -80px);
+        @include mixins.fluid((width, height), 160px, 160px, 160px);
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+        border-radius: 100%;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    z-index: 2;
+    @include mixins.fluid((width, height), 160px, 160px, 160px);
+  }
+}
+
+.modal {
+  @include mixins.grid;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  z-index: 999;
+  cursor: pointer;
+  .modalIframe {
+    grid-column: 3 / 11;
+    aspect-ratio: 16 / 9;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.containerSmall {
+  @extend .container;
+  .title {
+    @include mixins.fluid(
+      margin-bottom,
+      variables.$grid-gutter-mobile * 2,
+      variables.$grid-gutter-tablet * 2,
+      variables.$grid-gutter
+    );
+  }
+}
+
+.containerLarge {
+  @extend .container;
+  .textWrapper {
+    @include mixins.onDesktopMinUp {
+      min-height: 50vw;
+    }
+    justify-content: space-between;
+  }
+  .textInner {
+    justify-content: space-between;
+  }
+}
+
+.containerLightGrey {
+  background-color: var(--light-grey);
+}
+
+.containerBookDemo {
+  align-items: flex-start;
+  @extend .container;
+  // background-color: var(--green);
+  .textWrapper {
+    .title,
+    .title span:last-child {
+      // color: var(--white);
+    }
+  }
+  .rightWrapperForm {
+    z-index: 2;
+    // background-color: rgba(var(--grey-rgb), 0.2);
+  }
+  @include mixins.onTabletDown {
+    .textWrapper {
+      flex: 0;
+      order: 0;
+    }
+    .rightWrapperForm {
+      flex: 1;
+      height: 100%;
+      aspect-ratio: auto;
+      order: 1;
+    }
+  }
+}
+
+.doubleBlockLargeRecommend {
+  .textWrapper {
+    @include mixins.onDesktopMinUp {
+      min-height: 70vw;
+    }
+  }
+}

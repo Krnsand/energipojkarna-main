@@ -1,0 +1,27 @@
+@use '@/styles/mixins';
+
+.tagLabel {
+  @include mixins.fluid(border-radius, 2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mixins.fluid(height, 24px, 24px, 32px, 32px);
+  @include mixins.fluid((padding-left, padding-right), 12px);
+  white-space: nowrap;
+}
+.blue {
+  color: var(--white);
+  background-color: var(--blue);
+}
+.red {
+  color: var(--white);
+  background-color: var(--red);
+}
+.green {
+  color: var(--white);
+  background-color: var(--green);
+}
+.yellow {
+  color: var(--grey);
+  background-color: var(--yellow);
+}

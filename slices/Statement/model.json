@@ -1,0 +1,157 @@
+{
+  "id": "statement",
+  "type": "SharedSlice",
+  "name": "Statement",
+  "description": "Statement",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Statement",
+      "primary": {
+        "titleRow1": {
+          "config": {
+            "label": "Title Row 1",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "titleRow2": {
+          "config": {
+            "label": "Title Row 2",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "bodyText": {
+          "config": {
+            "label": "Body Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "graphicElements": {
+          "config": {
+            "label": "Graphic Elements",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          },
+          "type": "Boolean"
+        }
+      },
+      "items": {
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "statementWithBackground",
+      "name": "Statement With Background",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Statement",
+      "primary": {
+        "titleRow1": {
+          "config": {
+            "label": "Title Row 1",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "titleRow2": {
+          "config": {
+            "label": "Title Row 2",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "bodyText": {
+          "config": {
+            "label": "Body Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "graphicElements": {
+          "config": {
+            "label": "Graphic Elements",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          },
+          "type": "Boolean"
+        },
+        "backgroundImage": {
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "dimBackground": {
+          "config": {
+            "label": "Dim Background",
+            "placeholder": "",
+            "options": [
+              "40",
+              "60",
+              "80"
+            ],
+            "default_value": "40"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "buttonLabel": {
+          "config": {
+            "label": "Button Label",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "category": {
+      "__TYPE__": "FieldContent",
+      "value": "Utomhusdel",
+      "type": "Select"
+    },
+    "title": {
+      "__TYPE__": "FieldContent",
+      "value": "sometime",
+      "type": "Text"
+    },
+    "unit": {
+      "__TYPE__": "FieldContent",
+      "value": "crowd",
+      "type": "Text"
+    }
+  }
+]

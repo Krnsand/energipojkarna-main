@@ -1,0 +1,84 @@
+@use '@/styles/mixins';
+@use '@/styles/variables';
+
+.container {
+  background: var(--light-grey);
+  @include mixins.fluid(
+    (padding-top, padding-bottom),
+    variables.$grid-gutter-mobile * 5,
+    variables.$grid-gutter-tablet * 5,
+    variables.$grid-gutter * 5
+  );
+}
+
+.productList {
+  @include mixins.grid(1, 3, 4);
+}
+.productInfo {
+}
+
+.priceContainer {
+  @include mixins.fluid(height, 100px, 50px, 60px, 60px);
+  display: grid;
+}
+.priceText {
+  font-weight: 700;
+  color: var(--red);
+}
+
+.productCard {
+  position: relative;
+  background-color: var(--white);
+  @include mixins.fluid(padding, 15px, 15px, 20px, 30px);
+  @include mixins.fluid(border-radius, 6px, 12px, 12px, 12px);
+  @include mixins.fluid(gap, 20px, 20px, 20px, 20px);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -webkit-tap-highlight-color: transparent;
+
+  @include mixins.onTabletUp {
+    flex-direction: column;
+  }
+}
+
+.productImageWrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include mixins.fluid(gap, 10px, 10px, 10px, 10px);
+}
+.productInfo {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @include mixins.fluid(gap, 10px, 10px, 10px, 10px);
+}
+.productImage {
+  img {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.energyLabel {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  @include mixins.onTabletUp {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.productLabels {
+  display: flex;
+  @include mixins.fluid(gap, 10px);
+  flex-wrap: wrap;
+}

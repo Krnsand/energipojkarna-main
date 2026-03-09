@@ -1,0 +1,27 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "center"
+    },
+    "title": {
+      "__TYPE__": "FieldContent",
+      "value": "lake",
+      "type": "Text"
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": []
+    },
+    "metaTitle": {
+      "__TYPE__": "FieldContent",
+      "value": "likely",
+      "type": "Text"
+    },
+    "metaDescription": {
+      "__TYPE__": "FieldContent",
+      "value": "student",
+      "type": "Text"
+    }
+  }
+]

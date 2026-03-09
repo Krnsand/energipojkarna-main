@@ -1,0 +1,152 @@
+{
+  "id": "product",
+  "label": "Product",
+  "repeatable": true,
+  "status": true,
+  "format": "custom",
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Url",
+          "placeholder": ""
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "brand": {
+        "type": "Link",
+        "config": {
+          "label": "Brand",
+          "select": "document",
+          "customtypes": [
+            "brand"
+          ]
+        }
+      },
+      "category": {
+        "type": "Link",
+        "config": {
+          "label": "Category",
+          "select": "document",
+          "customtypes": [
+            "category"
+          ]
+        }
+      },
+      "short_description": {
+        "type": "Text",
+        "config": {
+          "label": "Short description",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "double_block_small": {
+              "type": "SharedSlice"
+            },
+            "double_block_large": {
+              "type": "SharedSlice"
+            },
+            "statement": {
+              "type": "SharedSlice"
+            },
+            "text_block": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Variants": {
+      "variants": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "product_variant": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Media": {
+      "primary_image": {
+        "type": "Image",
+        "config": {
+          "label": "Primary image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "images": {
+        "type": "Group",
+        "config": {
+          "label": "Images",
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "Documents": {
+      "documents": {
+        "type": "Group",
+        "config": {
+          "label": "Documents",
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            },
+            "file": {
+              "type": "Link",
+              "config": {
+                "label": "File",
+                "placeholder": "",
+                "select": "media"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Seo": {
+      "metaTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "metaDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
