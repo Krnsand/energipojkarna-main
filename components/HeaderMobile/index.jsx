@@ -46,12 +46,27 @@ const HeaderMobile = ({ menu, buttons }) => {
       <header className={`${styles.header}`}>
         <div className={`${styles.navbar} container`}>
           <div className={styles.navbarInner}>
-            <Link draggable={false} href={'/'} className={`${styles.logo}`}>
+            <Link
+              draggable={false}
+              href={'/'}
+              aria-label="Energipojkarna - startsida"
+              className={`${styles.logo}`}>
               <Logo textColor={navbarActive && 'var(--white)'} />
             </Link>
             {!navbarActive && (
               <div
                 onClick={() => setShouldHideSearch(!shouldHideSearch)}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    setShouldHideSearch(!shouldHideSearch)
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={
+                  shouldHideSearch ? 'Öppna sök' : 'Stäng sök'
+                }
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -71,7 +86,16 @@ const HeaderMobile = ({ menu, buttons }) => {
             )}
             <div
               className={navbarActive ? styles.iconActive : styles.icon}
-              onClick={() => setNavbarActive(!navbarActive)}>
+              onClick={() => setNavbarActive(!navbarActive)}
+              onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setNavbarActive(!navbarActive)
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label={navbarActive ? 'Stäng meny' : 'Öppna meny'}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"

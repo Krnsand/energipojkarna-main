@@ -49,7 +49,7 @@ const DoubleBlockVideo = ({
               width={video.thumbnail_width}
               height={video.thumbnail_height}
               src={video.thumbnail_url}
-              alt=""
+              alt="Förhandsvisning av video"
             />
             <motion.div
               whileTap={{ scale: 0.9 }}

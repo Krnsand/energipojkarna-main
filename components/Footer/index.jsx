@@ -50,6 +50,7 @@ const Footer = ({
                 <PrismicImage
                   draggable={false}
                   width={p.image.width}
+                  alt={p?.image?.alt || 'Partner logotyp'}
                   field={p.image}
                 />
               </div>

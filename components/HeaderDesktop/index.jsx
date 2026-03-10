@@ -12,7 +12,11 @@ const HeaderDesktop = ({ menu, topBar }) => {
   return (
     <header className={`${styles.header}`}>
       <TopBar className={styles.topBar} labels={topBar} />
-      <Link draggable={false} href="/" className={`${styles.logo} container`}>
+      <Link
+        draggable={false}
+        href="/"
+        aria-label="Energipojkarna - startsida"
+        className={`${styles.logo} container`}>
         <Logo />
       </Link>
       <nav className={`${styles.links} container`}>
