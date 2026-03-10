@@ -33,6 +33,57 @@ function App({ Component, pageProps }) {
   // Automatically capture and save UTM parameters on all pages
   useUTMCookies()
 
+  const [hasTrackingConsent, setHasTrackingConsent] = React.useState(false)
+  const [isClient, setIsClient] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsClient(true)
+
+    const readConsent = () => {
+      try {
+        if (typeof document !== 'undefined') {
+          const match = document.cookie.match(
+            /(?:^|; )tracking_consent=([^;]*)/,
+          )
+          if (match?.[1] === 'granted') return true
+        }
+        if (typeof window !== 'undefined') {
+          const v = window.localStorage.getItem('trackingConsent')
+          return v === 'granted'
+        }
+      } catch {}
+      return false
+    }
+
+    const update = () => setHasTrackingConsent(readConsent())
+
+    if (typeof window !== 'undefined') {
+      window.setTrackingConsent = granted => {
+        try {
+          window.localStorage.setItem(
+            'trackingConsent',
+            granted ? 'granted' : 'denied',
+          )
+        } catch {}
+        try {
+          document.cookie = `tracking_consent=${
+            granted ? 'granted' : 'denied'
+          }; path=/; max-age=31536000; samesite=lax`
+        } catch {}
+        window.dispatchEvent(new Event('tracking-consent-changed'))
+      }
+      window.addEventListener('tracking-consent-changed', update)
+    }
+
+    update()
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('tracking-consent-changed', update)
+      }
+    }
+  }, [])
+
   const minifyNProgressCSS = React.useCallback(
     css => (
       <style>
@@ -77,7 +128,7 @@ function App({ Component, pageProps }) {
           content="width=device-width, initial-scale=1"
         />
       </Head>
-      {!isDevelopment && (
+      {!isDevelopment && isClient && hasTrackingConsent && (
         <>
           <Script
             id="gtm-init"
