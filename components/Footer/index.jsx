@@ -49,8 +49,13 @@ const Footer = ({
               <div key={`footer-image-partner-${index}`}>
                 <PrismicImage
                   draggable={false}
-                  width={p.image.width}
-                  height={p.image.height}
+                  width={560}
+                  height={240}
+                  imgixParams={{
+                    w: 560,
+                    h: 240,
+                    fit: 'max',
+                  }}
                   alt={p?.image?.alt || 'Partner logotyp'}
                   field={p.image}
                 />

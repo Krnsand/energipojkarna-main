@@ -55,11 +55,19 @@
   align-items: flex-start;
   @include mixins.fluid(gap, 20px, 30px, 40px, 40px);
   @include mixins.onMobile {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
   }
   img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+    max-height: 90px;
+    object-fit: contain;
+    @include mixins.onMobile {
+      max-width: 100%;
+      max-height: 120px;
+    }
   }
 }
 .footerPhone {
