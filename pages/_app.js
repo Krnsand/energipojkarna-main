@@ -102,6 +102,7 @@ function App({ Component, pageProps }) {
           siteName: 'Energipojkarna',
         }}
         norobots={!isProduction}
+        description="Energipojkarna hjälper dig med värmepumpar, AC och energieffektiva lösningar. Utforska produkter, installation och service för ett behagligare inomhusklimat."
         title="Allt inom värmepumpar"
         titleTemplate="Energipojkarna | %s"
       />
