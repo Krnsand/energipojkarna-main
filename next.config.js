@@ -4,6 +4,7 @@ const redirects = require('./redirects')
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  productionBrowserSourceMaps: process.env.ENABLE_SOURCEMAPS === 'true',
   images: {
     domains: [
       'images.prismic.io',
